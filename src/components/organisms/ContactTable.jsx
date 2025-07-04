@@ -25,9 +25,21 @@ const ContactTable = ({
     }
   };
 
-  const sortedContacts = [...contacts].sort((a, b) => {
-    const aValue = a[sortField];
-    const bValue = b[sortField];
+const sortedContacts = [...contacts].sort((a, b) => {
+    let aValue = a[sortField];
+    let bValue = b[sortField];
+    
+    // Handle lookup field objects by extracting the Name property
+    if (aValue && typeof aValue === 'object' && aValue.Name !== undefined) {
+      aValue = aValue.Name;
+    }
+    if (bValue && typeof bValue === 'object' && bValue.Name !== undefined) {
+      bValue = bValue.Name;
+    }
+    
+    // Ensure we have values to compare
+    aValue = aValue || '';
+    bValue = bValue || '';
     
     if (sortDirection === 'asc') {
       return aValue > bValue ? 1 : -1;
@@ -152,13 +164,17 @@ const ContactTable = ({
               <td>
                 <div className="flex items-center">
                   <div className="w-10 h-10 bg-gradient-to-r from-secondary to-accent rounded-full flex items-center justify-center mr-3">
-                    <span className="text-white font-semibold text-sm">
-                      {contact.name?.charAt(0)?.toUpperCase() || 'U'}
+<span className="text-white font-semibold text-sm">
+                      {(contact.name && typeof contact.name === 'object' ? contact.name.Name : contact.name)?.charAt(0)?.toUpperCase() || 'U'}
                     </span>
                   </div>
                   <div>
-                    <div className="font-medium text-gray-900">{contact.name}</div>
-                    <div className="text-sm text-gray-600">{contact.phone}</div>
+                    <div className="font-medium text-gray-900">
+                      {contact.name && typeof contact.name === 'object' ? contact.name.Name : contact.name}
+                    </div>
+                    <div className="text-sm text-gray-600">
+                      {contact.phone && typeof contact.phone === 'object' ? contact.phone.Name : contact.phone}
+                    </div>
                   </div>
                 </div>
               </td>

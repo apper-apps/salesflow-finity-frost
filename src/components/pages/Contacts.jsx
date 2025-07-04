@@ -40,12 +40,17 @@ const [contacts, setContacts] = useState([]);
   }, []);
 
 useEffect(() => {
-    if (searchTerm) {
-      const filtered = contacts.filter(contact =>
-        contact?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        contact?.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        contact?.company?.toLowerCase().includes(searchTerm.toLowerCase())
-      );
+if (searchTerm) {
+      const filtered = contacts.filter(contact => {
+        // Handle both primitive values and lookup field objects
+        const name = contact?.name && typeof contact.name === 'object' ? contact.name.Name : contact.name;
+        const email = contact?.email && typeof contact.email === 'object' ? contact.email.Name : contact.email;
+        const company = contact?.company && typeof contact.company === 'object' ? contact.company.Name : contact.company;
+        
+        return name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+               email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+               company?.toLowerCase().includes(searchTerm.toLowerCase());
+      });
       setFilteredContacts(filtered);
     } else {
       setFilteredContacts(contacts);
