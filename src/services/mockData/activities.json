@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "type": "call",
+    "contactId": 1,
+    "subject": "Proposal Discussion",
+    "notes": "Discussed the CRM implementation timeline. Client is interested but has concerns about data migration. Scheduled follow-up for next week.",
+    "timestamp": "2023-11-15T14:30:00Z"
+  },
+  {
+    "Id": 2,
+    "type": "email",
+    "contactId": 2,
+    "subject": "Contract Documents Sent",
+    "notes": "Sent final contract documents for review. Client confirmed receipt and will review with legal team by end of week.",
+    "timestamp": "2023-11-20T11:45:00Z"
+  },
+  {
+    "Id": 3,
+    "type": "meeting",
+    "contactId": 3,
+    "subject": "Enterprise Demo Meeting",
+    "notes": "Conducted product demo focusing on enterprise features. Attendees were impressed with scalability options. Next step: technical requirements gathering.",
+    "timestamp": "2023-11-18T09:30:00Z"
+  },
+  {
+    "Id": 4,
+    "type": "call",
+    "contactId": 4,
+    "subject": "Discovery Call",
+    "notes": "Initial discovery call completed. Startup is looking for basic package to start. Budget confirmed at $12k. Good fit for our starter plan.",
+    "timestamp": "2023-11-22T16:15:00Z"
+  },
+  {
+    "Id": 5,
+    "type": "email",
+    "contactId": 5,
+    "subject": "Project Kickoff Confirmation",
+    "notes": "Confirmed project kickoff meeting scheduled for next week. Sent agenda and team introduction materials.",
+    "timestamp": "2023-10-25T12:00:00Z"
+  },
+  {
+    "Id": 6,
+    "type": "meeting",
+    "contactId": 6,
+    "subject": "Marketing Strategy Discussion",
+    "notes": "Discussed their marketing analytics needs. They need advanced reporting features. Preparing custom proposal.",
+    "timestamp": "2023-11-23T10:30:00Z"
+  },
+  {
+    "Id": 7,
+    "type": "call",
+    "contactId": 7,
+    "subject": "Technical Requirements Call",
+    "notes": "Discussed integration requirements with their existing fintech stack. Complex integration needed. Scheduling technical architect call.",
+    "timestamp": "2023-11-24T15:45:00Z"
+  },
+  {
+    "Id": 8,
+    "type": "email",
+    "contactId": 8,
+    "subject": "Proposal Feedback Review",
+    "notes": "Received feedback on proposal. They need additional security features for healthcare compliance. Preparing revised proposal.",
+    "timestamp": "2023-11-21T13:20:00Z"
+  },
+  {
+    "Id": 9,
+    "type": "task",
+    "contactId": 1,
+    "subject": "Data Migration Plan",
+    "notes": "Created detailed data migration plan for TechCorp. Includes timeline, resources needed, and risk mitigation strategies.",
+    "timestamp": "2023-11-14T10:15:00Z"
+  },
+  {
+    "Id": 10,
+    "type": "note",
+    "contactId": 2,
+    "subject": "Contract Terms Discussion",
+    "notes": "Client requested changes to payment terms. Discussed options for quarterly vs annual billing. Prefer quarterly for cash flow.",
+    "timestamp": "2023-11-19T08:45:00Z"
+  }
+]

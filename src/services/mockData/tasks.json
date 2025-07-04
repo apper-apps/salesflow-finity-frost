@@ -1,0 +1,92 @@
+[
+  {
+    "Id": 1,
+    "title": "Follow up on TechCorp proposal",
+    "description": "Schedule a call to discuss the CRM implementation timeline and address any concerns",
+    "contactId": 1,
+    "dueDate": "2023-11-30T09:00:00Z",
+    "priority": "high",
+    "completed": false
+  },
+  {
+    "Id": 2,
+    "title": "Send contract to Innovate Labs",
+    "description": "Prepare and send the final contract documents for the software license agreement",
+    "contactId": 2,
+    "dueDate": "2023-11-28T10:00:00Z",
+    "priority": "high",
+    "completed": false
+  },
+  {
+    "Id": 3,
+    "title": "Prepare demo for Global Inc",
+    "description": "Create a customized demo showcasing enterprise features for the upcoming presentation",
+    "contactId": 3,
+    "dueDate": "2023-12-05T14:00:00Z",
+    "priority": "medium",
+    "completed": false
+  },
+  {
+    "Id": 4,
+    "title": "Initial call with StartupCo",
+    "description": "Schedule and conduct the first discovery call to understand their requirements",
+    "contactId": 4,
+    "dueDate": "2023-12-01T11:00:00Z",
+    "priority": "medium",
+    "completed": false
+  },
+  {
+    "Id": 5,
+    "title": "Project kickoff with Wilson Consulting",
+    "description": "Organize the project kickoff meeting and introduce the team",
+    "contactId": 5,
+    "dueDate": "2023-11-25T15:00:00Z",
+    "priority": "high",
+    "completed": true
+  },
+  {
+    "Id": 6,
+    "title": "Send pricing proposal to Marketing Pro",
+    "description": "Create and send detailed pricing proposal for analytics package",
+    "contactId": 6,
+    "dueDate": "2023-12-03T12:00:00Z",
+    "priority": "medium",
+    "completed": false
+  },
+  {
+    "Id": 7,
+    "title": "Technical requirements gathering - FinTech",
+    "description": "Schedule technical call to gather integration requirements",
+    "contactId": 7,
+    "dueDate": "2023-12-10T10:00:00Z",
+    "priority": "low",
+    "completed": false
+  },
+  {
+    "Id": 8,
+    "title": "Review Healthcare Systems feedback",
+    "description": "Analyze feedback from the proposal and prepare response",
+    "contactId": 8,
+    "dueDate": "2023-11-29T16:00:00Z",
+    "priority": "medium",
+    "completed": false
+  },
+  {
+    "Id": 9,
+    "title": "Quarterly business review - TechCorp",
+    "description": "Prepare quarterly review materials and schedule meeting",
+    "contactId": 1,
+    "dueDate": "2023-12-15T14:00:00Z",
+    "priority": "low",
+    "completed": false
+  },
+  {
+    "Id": 10,
+    "title": "Contract renewal reminder - Innovate Labs",
+    "description": "Send reminder about upcoming contract renewal and schedule discussion",
+    "contactId": 2,
+    "dueDate": "2024-01-15T09:00:00Z",
+    "priority": "low",
+    "completed": false
+  }
+]

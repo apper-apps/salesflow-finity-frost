@@ -1,0 +1,90 @@
+[
+  {
+    "Id": 1,
+    "name": "John Smith",
+    "email": "john.smith@techcorp.com",
+    "phone": "(555) 123-4567",
+    "company": "TechCorp Solutions",
+    "status": "active",
+    "tags": ["prospect", "technology"],
+    "createdAt": "2023-10-01T10:00:00Z",
+    "lastContact": "2023-11-15T14:30:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "Sarah Johnson",
+    "email": "sarah.johnson@innovate.com",
+    "phone": "(555) 234-5678",
+    "company": "Innovate Labs",
+    "status": "active",
+    "tags": ["client", "software"],
+    "createdAt": "2023-10-05T09:15:00Z",
+    "lastContact": "2023-11-20T11:45:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Michael Chen",
+    "email": "michael.chen@globalinc.com",
+    "phone": "(555) 345-6789",
+    "company": "Global Inc",
+    "status": "active",
+    "tags": ["lead", "enterprise"],
+    "createdAt": "2023-10-10T16:20:00Z",
+    "lastContact": "2023-11-18T09:30:00Z"
+  },
+  {
+    "Id": 4,
+    "name": "Emily Rodriguez",
+    "email": "emily.rodriguez@startupco.com",
+    "phone": "(555) 456-7890",
+    "company": "StartupCo",
+    "status": "active",
+    "tags": ["prospect", "startup"],
+    "createdAt": "2023-10-15T13:45:00Z",
+    "lastContact": "2023-11-22T16:15:00Z"
+  },
+  {
+    "Id": 5,
+    "name": "David Wilson",
+    "email": "david.wilson@consulting.com",
+    "phone": "(555) 567-8901",
+    "company": "Wilson Consulting",
+    "status": "inactive",
+    "tags": ["client", "consulting"],
+    "createdAt": "2023-09-20T08:30:00Z",
+    "lastContact": "2023-10-25T12:00:00Z"
+  },
+  {
+    "Id": 6,
+    "name": "Lisa Anderson",
+    "email": "lisa.anderson@marketing.com",
+    "phone": "(555) 678-9012",
+    "company": "Marketing Pro",
+    "status": "active",
+    "tags": ["lead", "marketing"],
+    "createdAt": "2023-11-01T14:00:00Z",
+    "lastContact": "2023-11-23T10:30:00Z"
+  },
+  {
+    "Id": 7,
+    "name": "Robert Kim",
+    "email": "robert.kim@fintech.com",
+    "phone": "(555) 789-0123",
+    "company": "FinTech Solutions",
+    "status": "active",
+    "tags": ["prospect", "fintech"],
+    "createdAt": "2023-11-05T11:20:00Z",
+    "lastContact": "2023-11-24T15:45:00Z"
+  },
+  {
+    "Id": 8,
+    "name": "Jennifer Brown",
+    "email": "jennifer.brown@healthcare.com",
+    "phone": "(555) 890-1234",
+    "company": "Healthcare Systems",
+    "status": "active",
+    "tags": ["client", "healthcare"],
+    "createdAt": "2023-10-25T09:45:00Z",
+    "lastContact": "2023-11-21T13:20:00Z"
+  }
+]

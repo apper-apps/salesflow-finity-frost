@@ -1,0 +1,82 @@
+[
+  {
+    "Id": 1,
+    "title": "TechCorp CRM Implementation",
+    "contactId": 1,
+    "stage": "proposal",
+    "value": 75000,
+    "probability": 75,
+    "expectedClose": "2023-12-15T00:00:00Z",
+    "createdAt": "2023-10-01T10:00:00Z"
+  },
+  {
+    "Id": 2,
+    "title": "Innovate Labs Software License",
+    "contactId": 2,
+    "stage": "negotiation",
+    "value": 45000,
+    "probability": 85,
+    "expectedClose": "2023-12-01T00:00:00Z",
+    "createdAt": "2023-10-05T09:15:00Z"
+  },
+  {
+    "Id": 3,
+    "title": "Global Inc Enterprise Package",
+    "contactId": 3,
+    "stage": "qualified",
+    "value": 150000,
+    "probability": 60,
+    "expectedClose": "2024-01-30T00:00:00Z",
+    "createdAt": "2023-10-10T16:20:00Z"
+  },
+  {
+    "Id": 4,
+    "title": "StartupCo Basic Plan",
+    "contactId": 4,
+    "stage": "lead",
+    "value": 12000,
+    "probability": 25,
+    "expectedClose": "2024-02-15T00:00:00Z",
+    "createdAt": "2023-10-15T13:45:00Z"
+  },
+  {
+    "Id": 5,
+    "title": "Wilson Consulting Services",
+    "contactId": 5,
+    "stage": "closed",
+    "value": 25000,
+    "probability": 100,
+    "expectedClose": "2023-11-01T00:00:00Z",
+    "createdAt": "2023-09-20T08:30:00Z"
+  },
+  {
+    "Id": 6,
+    "title": "Marketing Pro Analytics",
+    "contactId": 6,
+    "stage": "qualified",
+    "value": 35000,
+    "probability": 50,
+    "expectedClose": "2024-01-15T00:00:00Z",
+    "createdAt": "2023-11-01T14:00:00Z"
+  },
+  {
+    "Id": 7,
+    "title": "FinTech Integration",
+    "contactId": 7,
+    "stage": "lead",
+    "value": 90000,
+    "probability": 30,
+    "expectedClose": "2024-03-01T00:00:00Z",
+    "createdAt": "2023-11-05T11:20:00Z"
+  },
+  {
+    "Id": 8,
+    "title": "Healthcare Systems Upgrade",
+    "contactId": 8,
+    "stage": "proposal",
+    "value": 65000,
+    "probability": 70,
+    "expectedClose": "2023-12-20T00:00:00Z",
+    "createdAt": "2023-10-25T09:45:00Z"
+  }
+]
