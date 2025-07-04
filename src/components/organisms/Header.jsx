@@ -1,11 +1,14 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
+import { useSelector } from 'react-redux';
 import Button from '@/components/atoms/Button';
 import SearchBar from '@/components/molecules/SearchBar';
 import ApperIcon from '@/components/ApperIcon';
-
+import { AuthContext } from '../../App';
 const Header = ({ onMenuClick, title = 'Dashboard', onSearch, className = '' }) => {
   const [searchTerm, setSearchTerm] = useState('');
+  const { logout } = useContext(AuthContext);
+  const { user, isAuthenticated } = useSelector((state) => state.user);
 
   const handleSearch = (term) => {
     setSearchTerm(term);
@@ -17,6 +20,9 @@ const Header = ({ onMenuClick, title = 'Dashboard', onSearch, className = '' }) 
     onSearch?.('');
   };
 
+  const handleLogout = () => {
+    logout();
+  };
   return (
     <motion.header
       initial={{ y: -20, opacity: 0 }}
@@ -48,7 +54,7 @@ const Header = ({ onMenuClick, title = 'Dashboard', onSearch, className = '' }) 
               />
             </div>
             
-            <div className="flex items-center space-x-2">
+<div className="flex items-center space-x-2">
               <Button
                 variant="outline"
                 size="sm"
@@ -63,6 +69,22 @@ const Header = ({ onMenuClick, title = 'Dashboard', onSearch, className = '' }) 
                 size="sm"
                 icon="Settings"
               />
+
+              {isAuthenticated && (
+                <div className="flex items-center space-x-2 ml-4">
+                  <div className="hidden md:block text-sm text-gray-600">
+                    {user?.firstName} {user?.lastName}
+                  </div>
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    icon="LogOut"
+                    onClick={handleLogout}
+                  >
+                    Logout
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         </div>
