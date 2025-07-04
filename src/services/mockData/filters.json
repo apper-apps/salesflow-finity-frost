@@ -1,0 +1,56 @@
+[
+  {
+    "Id": 1,
+    "name": "Active Prospects",
+    "type": "contacts",
+    "criteria": [
+      {
+        "id": 1,
+        "field": "status",
+        "operator": "equals",
+        "value": "active"
+      },
+      {
+        "id": 2,
+        "field": "tags",
+        "operator": "in",
+        "value": ["prospect"]
+      }
+    ],
+    "createdAt": "2023-11-01T10:00:00Z"
+  },
+  {
+    "Id": 2,
+    "name": "High Value Deals",
+    "type": "deals",
+    "criteria": [
+      {
+        "id": 1,
+        "field": "value",
+        "operator": "greaterThan",
+        "value": "50000"
+      },
+      {
+        "id": 2,
+        "field": "probability",
+        "operator": "greaterThanOrEqual",
+        "value": "70"
+      }
+    ],
+    "createdAt": "2023-11-02T14:30:00Z"
+  },
+  {
+    "Id": 3,
+    "name": "Recent Contacts",
+    "type": "contacts",
+    "criteria": [
+      {
+        "id": 1,
+        "field": "createdAt",
+        "operator": "after",
+        "value": "2023-11-01"
+      }
+    ],
+    "createdAt": "2023-11-03T09:15:00Z"
+  }
+]

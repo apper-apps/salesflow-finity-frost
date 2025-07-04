@@ -34,12 +34,13 @@ const FormField = ({
     ...props
   };
 
-  switch (type) {
+switch (type) {
     case 'select':
       return (
         <Select
           {...commonProps}
           options={options}
+          multiple={props.multiple}
         />
       );
     case 'textarea':

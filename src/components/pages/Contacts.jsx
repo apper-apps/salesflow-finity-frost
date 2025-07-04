@@ -1,15 +1,16 @@
-import { useState, useEffect } from 'react';
-import { toast } from 'react-toastify';
-import Button from '@/components/atoms/Button';
-import SearchBar from '@/components/molecules/SearchBar';
-import ContactTable from '@/components/organisms/ContactTable';
-import ContactModal from '@/components/organisms/ContactModal';
-import Loading from '@/components/ui/Loading';
-import Error from '@/components/ui/Error';
-import contactService from '@/services/api/contactService';
+import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
+import ContactModal from "@/components/organisms/ContactModal";
+import ContactTable from "@/components/organisms/ContactTable";
+import FilterBuilder from "@/components/organisms/FilterBuilder";
+import Button from "@/components/atoms/Button";
+import Error from "@/components/ui/Error";
+import Loading from "@/components/ui/Loading";
+import SearchBar from "@/components/molecules/SearchBar";
+import contactService from "@/services/api/contactService";
 
 const Contacts = () => {
-  const [contacts, setContacts] = useState([]);
+const [contacts, setContacts] = useState([]);
   const [filteredContacts, setFilteredContacts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
@@ -17,7 +18,8 @@ const Contacts = () => {
   const [showModal, setShowModal] = useState(false);
   const [selectedContact, setSelectedContact] = useState(null);
   const [modalLoading, setModalLoading] = useState(false);
-
+  const [showFilterBuilder, setShowFilterBuilder] = useState(false);
+  const [activeFilters, setActiveFilters] = useState([]);
   const loadContacts = async () => {
     try {
       setLoading(true);
@@ -37,12 +39,12 @@ const Contacts = () => {
     loadContacts();
   }, []);
 
-  useEffect(() => {
+useEffect(() => {
     if (searchTerm) {
       const filtered = contacts.filter(contact =>
-        contact.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        contact.email.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        contact.company.toLowerCase().includes(searchTerm.toLowerCase())
+        contact?.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        contact?.email?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        contact?.company?.toLowerCase().includes(searchTerm.toLowerCase())
       );
       setFilteredContacts(filtered);
     } else {
@@ -153,10 +155,14 @@ const Contacts = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
             onSearch={handleSearch}
             onClear={handleClearSearch}
-          />
+/>
         </div>
         <div className="flex items-center space-x-2">
-          <Button variant="outline" icon="Filter">
+          <Button 
+            variant="outline" 
+            icon="Filter"
+            onClick={() => setShowFilterBuilder(true)}
+          >
             Filter
           </Button>
           <Button variant="outline" icon="Download">
@@ -173,15 +179,78 @@ const Contacts = () => {
         loading={loading}
       />
 
-      <ContactModal
+<ContactModal
         isOpen={showModal}
         onClose={handleCloseModal}
         onSave={handleSaveContact}
         contact={selectedContact}
         loading={modalLoading}
       />
+
+      <FilterBuilder
+        isOpen={showFilterBuilder}
+        onClose={() => setShowFilterBuilder(false)}
+        onApplyFilter={handleApplyFilters}
+        filterType="contacts"
+        currentFilters={activeFilters}
+      />
+
+      {activeFilters.length > 0 && (
+        <div className="fixed bottom-4 right-4 bg-white rounded-lg shadow-lg p-4 border">
+          <div className="flex items-center space-x-2">
+            <span className="text-sm font-medium text-gray-700">
+              {activeFilters.length} filter{activeFilters.length !== 1 ? 's' : ''} active
+            </span>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleClearFilters}
+              icon="X"
+            >
+              Clear
+            </Button>
+          </div>
+        </div>
+      )}
     </div>
   );
+};
+
+const handleApplyFilters = (filters) => {
+  setActiveFilters(filters);
+  setShowFilterBuilder(false);
+  
+  if (filters.length === 0) {
+    setFilteredContacts(contacts);
+    return;
+  }
+  
+  const filtered = contacts.filter(contact => {
+    return filters.every(filter => {
+      const value = contact[filter.field];
+      if (!value) return false;
+      
+      switch (filter.operator) {
+        case 'equals':
+          return value.toString().toLowerCase() === filter.value.toLowerCase();
+        case 'contains':
+          return value.toString().toLowerCase().includes(filter.value.toLowerCase());
+        case 'startsWith':
+          return value.toString().toLowerCase().startsWith(filter.value.toLowerCase());
+        case 'endsWith':
+          return value.toString().toLowerCase().endsWith(filter.value.toLowerCase());
+        default:
+          return true;
+      }
+    });
+  });
+  
+  setFilteredContacts(filtered);
+};
+
+const handleClearFilters = () => {
+  setActiveFilters([]);
+  setFilteredContacts(contacts);
 };
 
 export default Contacts;
