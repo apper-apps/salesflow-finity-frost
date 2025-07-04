@@ -181,9 +181,9 @@ const TaskList = ({
                               <ApperIcon name="Calendar" className="w-4 h-4 mr-1" />
                               {format(new Date(task.dueDate), 'MMM d, yyyy')}
                             </div>
-                            <div className="flex items-center">
+<div className="flex items-center">
                               <ApperIcon name="User" className="w-4 h-4 mr-1" />
-                              Contact ID: {task.contactId}
+                              {task.contactId?.Name ?? 'No Contact'}
                             </div>
                           </div>
                           

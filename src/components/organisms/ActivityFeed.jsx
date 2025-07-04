@@ -113,11 +113,10 @@ const ActivityFeed = ({
                   </div>
                 </div>
                 
-                <div className="flex items-center mb-3 text-sm text-gray-600">
+<div className="flex items-center mb-3 text-sm text-gray-600">
                   <ApperIcon name="User" className="w-4 h-4 mr-1" />
-                  Contact ID: {activity.contactId}
+                  {activity.contactId?.Name ?? 'No Contact'}
                 </div>
-                
                 {activity.notes && (
                   <div className="bg-gray-50 rounded-lg p-3">
                     <p className="text-sm text-gray-700">{activity.notes}</p>

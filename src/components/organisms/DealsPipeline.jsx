@@ -117,9 +117,9 @@ const DealsPipeline = ({
               {format(new Date(deal.expectedClose), 'MMM d, yyyy')}
             </div>
             
-            <div className="flex items-center text-sm text-gray-600">
+<div className="flex items-center text-sm text-gray-600">
               <ApperIcon name="User" className="w-4 h-4 mr-1" />
-              Contact ID: {deal.contactId}
+              {deal.contactId?.Name ?? 'No Contact'}
             </div>
           </div>
         </div>
